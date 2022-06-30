@@ -61,11 +61,11 @@ if streamlit.button('Add a fruit to the list'):
   my_cnx.close()
   streamlit.text(add_my_fruit)
   
-  if streamlit.button('Get fruit list'):
-    my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
-    back_from_function=get_fruit_load_list()
-    my_cnx.close()
-    streamlist.dataframe(back_from_function)
+if streamlit.button('Get fruit list'):
+  my_cnx=snowflake.connector.connect(**streamlit.secrets["snowflake"])
+  back_from_function=get_fruit_load_list()
+  my_cnx.close()
+  streamlist.dataframe(back_from_function)
     
  
 
